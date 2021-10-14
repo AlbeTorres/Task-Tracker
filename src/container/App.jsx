@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import AddTask from "../components/addtask";
 import Header from "../components/Header";
 import Tasks from "../components/Tasks";
 
@@ -47,6 +48,7 @@ const App = () =>{
     return(
         <div className='container'>
             <Header title= 'Task Tracker'/>
+            <AddTask/>
 
             {
                 tasks.length  > 0 ? (<Tasks tasks= {tasks} onDelete={deletTask} onToggle={taskReminder} />):('Nothing to Show')
